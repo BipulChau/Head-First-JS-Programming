@@ -3,10 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <title>Planets</title>
+    <style>
+      .redtext {color : red};
+    </style>
     <script>
       function init() {
         let planet = document.getElementById("greenplanet");
         planet.innerHTML = "Red Alert: hit by phaser fire!";
+        planet.setAttribute("class", "redtext");
       }
       window.onload = init;
     </script>
