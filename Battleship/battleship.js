@@ -132,6 +132,18 @@ controller.processGuess("B0");
 controller.processGuess("B1");
 controller.processGuess("B2");*/
 
+function init() {
+  let fireButton = document.getElementById("fireButton");
+  fireButton.onclick = handleFireButton;
+}
 
+function handleFireButton() {
+  let guessInput = document.getElementById("guessInput");
+  let guess = guessInput.value;
+  controller.processGuess(guess);
+  guessInput.value = "";
+}
+
+window.onload = init;
 
 
