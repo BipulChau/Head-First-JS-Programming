@@ -135,6 +135,8 @@ controller.processGuess("B2");*/
 function init() {
   let fireButton = document.getElementById("fireButton");
   fireButton.onclick = handleFireButton;
+  let guessInput = document.getElementById("guessInput");
+  guessInput.onkeypress = handleKeyPress;
 }
 
 function handleFireButton() {
@@ -144,6 +146,12 @@ function handleFireButton() {
   guessInput.value = "";
 }
 
+function handleKeyPress(e) {
+  let fireButton = document.getElementById("fireButton");
+  if (e.keyCode === 13) {
+    fireButton.click();
+    return false; // We return false so that form does not do anything else (like try to submit itself).
+  }
+}
+
 window.onload = init;
-
-
