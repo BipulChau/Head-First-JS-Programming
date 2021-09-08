@@ -8,7 +8,17 @@
         margin: 20px;
       }
     </style>
-    <script></script>
+    <script>
+      window.onload = init;
+      function init() {
+        let image = document.getElementById("zero");
+        image.onclick = showAnswer;
+      }
+      function showAnswer() {
+        let image = document.getElementById("zero");
+        image.src = "zero.jpg";
+      }
+    </script>
   </head>
   <body>
     <img id="zero" src="zeroblur.jpg" />
