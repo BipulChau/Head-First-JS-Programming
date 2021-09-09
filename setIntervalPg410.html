@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Set Interval</title>
+    <script>
+      window.onload = init;
+      function init() {
+        setInterval(ticker, 1000);
+      }
+
+      let tick = true;
+      function ticker() {
+        if (tick) {
+          console.log("Tick");
+          tick = false;
+        } else {
+          console.log("tock");
+          tick = true;
+        }
+      }
+    </script>
+  </head>
+</html>
